@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+module.ahmad,ir.model.access.csv,model_estate_property,base.group_user,1,1,1,1
+module.ahmad1,ir.model.access.csv,model_estate_property_type,base.group_user,1,1,1,1
+module.ahmad2,ir.model.access.csv,model_estate_property_tag,base.group_user,1,1,1,1
+module.ahmad3,ir.model.access.csv,model_estate_property_offer,base.group_user,1,1,1,1

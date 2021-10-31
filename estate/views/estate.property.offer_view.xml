@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="estate_view_tree_offer" model="ir.ui.view">
+  <field name="name">estate_offer.tree</field>
+  <field name="model">estate_property_offer</field>
+  <field name="arch" type="xml">
+    <tree string="Tags" editable="bottom" decoration-success="status=='Accepted'" decoration-danger="status=='Refused'">
+      <field name="price"/>
+      <field name="partner_id"/>
+      <field name="validity"/>
+      <field name="date_deadline"/>
+      <button name="accept_fun" type="object" string="Accept" icon="fa-check" attrs="{'invisible': ['|', ('status', '=', 'Refused'),('status', '=', 'Accepted') ]}"/>
+      <button name="decline_fun" type="object" string="Decline" icon="fa-check" attrs="{'invisible': ['|', ('status', '=', 'Refused'),('status', '=', 'Accepted') ]}"/>
+      <field name="status" invisible='1'/>
+    </tree>
+  </field>
+</record>
+</odoo>
+

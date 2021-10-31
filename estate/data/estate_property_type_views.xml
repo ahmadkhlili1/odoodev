@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="type_model_action" model="ir.actions.act_window">
+    <field name="name">Property type</field>
+    <field name="res_model">estate_property_type</field>
+    <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p>
+            Some examples of lost reasons: "We don't have people/skill", "Price too high"
+          </p>
+        </field>
+</record>
+
+
+
+</odoo>
+

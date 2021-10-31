@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="estate_view_tree_type" model="ir.ui.view">
+        <field name="name">estate_type.tree</field>
+        <field name="model">estate_property_type</field>
+        <field name="arch" type="xml">
+                <tree string="House">
+                        <field name="sequence" widget="handle"/>
+                        <field name="name"/>
+                 </tree>
+        </field>
+</record>
+</odoo>
+

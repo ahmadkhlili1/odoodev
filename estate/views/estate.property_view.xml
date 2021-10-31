@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="estate_view_tree1" model="ir.ui.view">	
+	<field name="name">estate.tree</field>
+  <field name="model">estate_property</field>
+	<field name="arch" type="xml">      
+      <tree string="Test" decoration-success="state=='Offer Received' or 'Offer Accepted'" decoration-bf="state=='Offer Accepted'" decoration-muted="state=='Sold'">
+        <field name="name"/>
+        <field name="state"/>
+        <field name="postcode"/>
+        <field name="bedrooms"/>
+        <field name="living_area"/>
+        <field name="expected_price"/>
+        <field name="selling_price"/>
+        <field name="date_availability" optional='1'/>
+        <field name="property_type_id"/>
+        <field name="tag_ids" widget="many2many_tags"/>
+      </tree>
+    </field>
+</record>
+</odoo>

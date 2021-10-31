@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="test_model_action" model="ir.actions.act_window">
+    <field name="name">Properties</field>
+    <field name="res_model">estate_property</field>
+    <field name="view_mode">tree,form</field>
+        <field name="help">
+        {
+          'search_default_inactive' : True
+        }
+        </field>
+</record>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="estate_view_form" model="ir.ui.view">
+        <field name="name">estate.form</field>
+        <field name="model">estate_property</field>
+        <field name="arch" type="xml">
+
+<form string="House">
+    <header>
+        <!-- <button name="sold_fun" states='open' type="object" string="SOLD"/> -->
+        <button name="sold_fun" type="object" string="SOLD"/>
+        <button name="cancel_fun" type="object" string="Cancel"/>
+        <field name="state" widget="statusbar" statusbar_visible="New,Offer Received,Offer Accepted,Sold"/>
+    </header>
+    <sheet>
+        <group>
+    <h1>
+		    <field name="name"/>
+    </h1>
+    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+    <!-- <field name="state" widget="statusbar" statusbar_visible="New,Offer Received,Offer Accepted,Sold"/> -->
+	    </group>
+            
+        <group>  
+            <field name="postcode"/>
+            <field name="date_availability"/>
+            <field name="expected_price"/>
+            <field name="best_price"/>
+            <field name="selling_price"/>
+        </group>
+
+            <notebook>
+                <page string="Description">
+			<group>
+                    <field name="description"/>
+                    <field name="bedrooms"/>
+                    <field name="living_area"/>
+                    <field name="facades"/>
+                    <field name="garage"/>
+                    <field name="garden"/>
+                    <field name="garden_area" attrs="{'invisible': [('garden', '=', False)]}"/>
+                    <field name="active"/>
+                    <field name="garden_orientation" attrs="{'invisible': [('garden', '=', False)]}"/>
+                    <field name="total_area"/>
+		            <!-- <field name="state"/> -->
+		            <field name="property_type_id"/>
+	        </group>
+                </page>
+                <page string="Other Info.">
+			<group>
+                    <field name="seller"/>
+                    <field name="buyer"/>
+            </group>
+                </page>
+                <page string="Offer">
+			<group>
+                    <field name="offer_ids" attrs="{'readonly': ['|', ('state', '=', 'Offer Accepted'), ('state', '=', 'Sold'), ('state', '=', 'Canceled')]}"/>
+            </group>
+                </page>
+            </notebook>
+
+    </sheet>
+</form>
+</field>
+</record>
+</odoo>
+

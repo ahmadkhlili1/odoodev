@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <menuitem id="tag_model_menu_action" action="tag_model_action"/>
+	<menuitem id="test_menu_root" name="EState" sequence="1">
+        <menuitem id="type_first_level_menu" name="Setting" sequence="5">
+                <menuitem id="tage_model_menu_action" action="tag_model_action" sequence="6"/>
+</menuitem>
+</menuitem>
+</odoo>
+

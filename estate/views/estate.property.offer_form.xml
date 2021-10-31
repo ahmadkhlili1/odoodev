@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="estate_view_type_form" model="ir.ui.view">
+        <field name="name">estate_offer.form</field>
+        <field name="model">estate_property_offer</field>
+        <field name="arch" type="xml">
+
+            <form string="House">
+    <sheet>
+            <group>
+    <field name="price"/>
+    <field name="partner_id"/>
+    <field name="validity"/>
+    <field name="date_deadline"/>
+    <!-- <button name="accept_fun" type="object" string="Accept" icon="fa-check" /> -->
+    <!-- <button name="decline_fun" type="object" string="Decline" icon="fa-check" /> -->
+    <field name="status"/>
+	    </group>
+    </sheet>
+    </form>
+    </field>
+    </record>
+    </odoo>

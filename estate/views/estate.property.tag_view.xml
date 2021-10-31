@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="estate_view_tree_tag" model="ir.ui.view">
+  <field name="name">estate_tag.tree</field>
+  <field name="model">estate_property_tag</field>
+  <field name="arch" type="xml">
+    <tree string="Tags" editable="bottom">
+      <field name="name"/>
+    </tree>
+  </field>
+</record>
+</odoo>
+
