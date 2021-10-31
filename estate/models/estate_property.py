@@ -76,7 +76,7 @@ class TestModel(models.Model):
     @api.constrains('selling_price', 'expected_price')
     def _check_percent(self):
         for term_line in self:
-            if term_line.selling_price <= 0.90 * term_line.expected_price:
+            if term_line.selling_price <= 0.90 * term_line.expected_price and  term_line.state == 'Sold':
                 raise ValidationError(("Percentages on the selling price must be more than %90 from expected price."))
     
     @api.model
