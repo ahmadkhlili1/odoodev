@@ -62,7 +62,7 @@ class offer(models.Model):
         for record in self:
             if record.price < record.property_id.best_price:
                 raise ValidationError(("You cannot add"))
-        record.property_id.state = 'Offer Received'
+                record.property_id.state = 'Offer Received'
         return super().create(vals)
 
 
